@@ -1,9 +1,6 @@
-from typing import List
-
 from pydantic import BaseModel
 
 from todoer.models.base import Base
-from todoer.models.tasks import Task
 
 
 class UserSignIn(BaseModel):
@@ -15,7 +12,6 @@ class BaseUser(Base):
     email: str
     first_name: str | None = None
     last_name: str | None = None
-    tasks: List[Task] = []
 
 
 class UserSignUp(BaseUser):
